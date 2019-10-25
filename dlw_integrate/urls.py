@@ -20,7 +20,7 @@ from dlw.views import m14getwono,m14getdoc_no,m14getpart_no,m14getassly,m14getbr
 from dlw.views import dpo,dpoinput,checktotal,m1getpano,m1view,m5getwono,m5getdoc_no,m5getpart_no,m5getbr,m5view,m5getstaff_no,airbox_addbo,getcumino
 from dlw.views import m1genrept1,miscellaneous_section,miscell_addbo,axle_addbo,axlewheelmachining_section,m3sub,m3getdoc_no,m3getpart_no,m3getassly,m3shopsec,m3getbr,m3view,m3getwono
 from dlw.views import m7getwono,m7view,m7getempno,m7getpart_no,pinion_editsno,pinionpressing_section,pinion_addbo,airbox_editsno,axlepress_addbo,axlewheelpressing_section,M20view,m20getstaffno,m18view,m26view,m27view
-
+from dlw.views import m22view,m22getwono,m22getstaff
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -69,6 +69,9 @@ urlpatterns = [
     path('ajax/m14getpart_no/',m14getpart_no,name='m14getpart_no'),
     path('ajax/m14getdoc_no/',m14getdoc_no,name='m14getdoc_no'),
     path('ajax/m14getwono',m14getwono,name='m14getwono'),
+    path('m22view/', m22view, name='m22view'),
+    path('ajax/m22getwono/', m22getwono, name='m22getwono'),
+    path('ajax/m22getstaff/', m22getstaff, name='m22getstaff'),
     path('ajax/get_yr_dgp/',getYrDgp,name='get_yr_dgp'),
     path('ajax/check_loco/',checkloco,name='check_loco'),
     path('ajax/check_total/',checktotal,name='check_total'),
